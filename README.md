@@ -30,9 +30,6 @@ pip install -r requirements.txt
 ```bash
 bash run_all.sh
 ```
-Default sizes are those of the article: 50 channel realisations per point for the main sweeps, 100 for the partition study, 30 for the side studies and 100 designs for the reliability study. They can be changed through the environment variables `NREAL`, `NPART`, `NHI`, `NCDF` and `WORKERS`, e.g. `NREAL=10 NHI=5 NCDF=10 NPART=10 bash run_all.sh` for a quick run. Jobs are checkpointed in append only JSONL files under `results/` and resume on relaunch. Confidence intervals are 95 percent percentile bootstrap intervals (4000 paired resamples, fixed seed).
-
-Individual studies: `cd src && python3 runner.py 4` (partition study) or `python3 runner_ext.py a` (ablation); see the docstrings for the study keys.
 
 ## Citation
 Please cite the article if you use this code (full reference to be added on publication).
